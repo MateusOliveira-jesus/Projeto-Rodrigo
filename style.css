@@ -1,0 +1,251 @@
+/* INICIO ESTILIZAÇÃO GERAL */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* VARIAVEIS CORES E FONTES */
+:root {
+    --font-titulo: 'Rubik', sans-serif;
+    ;
+    --cor-escura: #1D1D1D;
+    ---cor-verde: #45AC9C;
+    --cor-ano: #C4E5E0;
+    --cor-letrat: #fff;
+    --cor-p: #999999;
+}
+
+/* FIM DAS CORES E FONTES */
+
+body {
+    position: relative;
+    background-color: var(--cor-escura);
+}
+
+
+/* INICIO MESCLAGEM CONTAINERS */
+
+.container-divs {
+    width: 40%;
+    width: 40%;
+    border: 1px solid #8f8f8f57;
+    padding: 10px 24px;
+    border-radius: 5px;
+
+}
+
+.container::before {
+    background-color: var(---cor-verde);
+    content: '';
+    display: block;
+    height: 95%;
+    left: 50%;
+    margin: 0 auto;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 2px;
+    z-index: 1;
+}
+
+/* FIM DA MESCLAGEM */
+
+
+/* FIM ESTILIZAÇÃO GERAL */
+
+
+/* INICIO DA ESTILIZAÇÃO TEXTO */
+div.titulo {
+    align-items: center;
+    border-radius: 100%;
+    background-color: var(---cor-verde);
+    color: white;
+    display: flex;
+    font: normal 12px arial;
+    height: 50px;
+    justify-content: center;
+    margin: 0 25px;
+    position: absolute;
+    padding: 2px;
+    text-align: center;
+    width: 50px;
+    z-index: 1;
+
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin: auto;
+    padding: 10px;
+    font-family: var(--font-titulo);
+}
+
+body h2 {
+    position: relative;
+
+    justify-content: center;
+    align-items: center;
+}
+
+body h3 {
+
+    margin: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: var(--font-titulo);
+    padding: 0;
+    color: var(--cor-letrat);
+    text-align: start;
+}
+
+body p {
+    text-align: start;
+
+    font-family: var(--font-titulo);
+    font-weight: 400;
+    font-size: 16px;
+    margin: 20px;
+    color: var(--cor-p);
+}
+
+p::first-letter {
+    text-transform: uppercase;
+}
+
+/* FIM ESTILIZAÇÃO TEXTO */
+
+
+/* INICIO DA DIV ESQUERDA */
+div.esquerda {
+    display: flex;
+    position: relative;
+}
+
+div.esquerda::after {
+    content: '';
+    width: 4%;
+    height: 2px;
+    background-color: var(---cor-verde);
+    display: block;
+    position: absolute;
+    right: 50.2%;
+    top: 50%;
+
+
+}
+
+div.esquerda__titulo {
+    top: 50%;
+    left: 42%;
+    transform: translateY(-50%);
+}
+
+div.esquerda__movimenta {
+    margin-left: 25px;
+    text-align: start;
+}
+
+/* FIM DA DIV ESQUERDA */
+
+
+/* INICIO DIV DIREITA */
+div.direita {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+
+}
+
+
+div.direita::before {
+    content: '';
+    width: 3%;
+    height: 2px;
+    background-color: var(---cor-verde);
+    display: block;
+    position: absolute;
+    left: 50.2%;
+    top: 50%;
+
+
+}
+
+div.direita__movimenta {
+    margin-right: 25px;
+    text-align: start;
+}
+
+div.direita__titulo {
+    top: 50%;
+    right: 42%;
+    transform: translateY(-50%);
+}
+
+
+/* FIM DIV DIREITA */
+
+
+/* INICIO TELAS MENORES */
+@media screen and (max-width:700px) {
+
+    /* INICIO GERAL */
+    .container::before {
+        left: 99%;
+    }
+
+    .container-divs {
+        width: 80%;
+        height: 120px;
+
+
+    }
+
+    /* FIM GERAL */
+    /* INICIO DA DIV ESQUERDA */
+
+
+    div.esquerda::after {
+        width: 5%;
+        right: 1.4%;
+    }
+
+    div.esquerda__titulo {
+        left: 82.7%;
+    }
+
+    div.esquerda__movimenta {
+        margin: 20px;
+    }
+
+    /* FIM DA DIV ESQUERDA */
+
+    /* INICIO DIV DIREITA */
+    div.direita {
+        justify-content: flex-start;
+
+    }
+
+    div.direita::before {
+        width: 5%;
+        left: 93.6%;
+
+
+    }
+
+    div.direita__movimenta {
+        margin: 20px;
+        text-align: start;
+    }
+
+    div.direita__titulo {
+        top: 50%;
+        left: 82.7%;
+        transform: translateY(-50%);
+    }
+
+    /* FIM DIREITA */
+}
+
+/* FIM TELAS MENORES */
