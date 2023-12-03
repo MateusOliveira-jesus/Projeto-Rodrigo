@@ -8,36 +8,35 @@
 
 /* VARIAVEIS CORES E FONTES */
 :root {
-    --font-titulo: 'Rubik', sans-serif;
-    ;
     --cor-escura: #1D1D1D;
-    ---cor-verde: #45AC9C;
+    --cor-verde: #45AC9C;
     --cor-ano: #C4E5E0;
     --cor-letrat: #fff;
     --cor-p: #999999;
+    --font-titulo: 'Rubik', sans-serif;
 }
 
 /* FIM DAS CORES E FONTES */
 
-body {
-    position: relative;
-    background-color: var(--cor-escura);
-}
 
 
 /* INICIO MESCLAGEM CONTAINERS */
 
+body {
+    background-color: var(--cor-escura);
+    position: relative;
+}
+
 .container-divs {
-    width: 40%;
-    width: 40%;
     border: 1px solid #8f8f8f57;
-    padding: 10px 24px;
     border-radius: 5px;
+    padding: 10px 24px;
+    width: 40%;
 
 }
 
 .container::before {
-    background-color: var(---cor-verde);
+    background-color: var(--cor-verde);
     content: '';
     display: block;
     height: 95%;
@@ -50,16 +49,15 @@ body {
 }
 
 /* FIM DA MESCLAGEM */
-
-
 /* FIM ESTILIZAÇÃO GERAL */
+
 
 
 /* INICIO DA ESTILIZAÇÃO TEXTO */
 div.titulo {
     align-items: center;
     border-radius: 100%;
-    background-color: var(---cor-verde);
+    background-color: var(--cor-verde);
     color: white;
     display: flex;
     font: normal 12px arial;
@@ -75,46 +73,43 @@ div.titulo {
 }
 
 h1 {
-    text-align: center;
     color: white;
+    font-family: var(--font-titulo);
     margin: auto;
     padding: 10px;
-    font-family: var(--font-titulo);
+    text-align: center;
 }
 
 body h2 {
-    position: relative;
-
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 body h3 {
-
-    margin: 20px;
+    color: var(--cor-letrat);
     font-size: 22px;
     font-weight: 600;
     font-family: var(--font-titulo);
+    margin: 20px;
     padding: 0;
-    color: var(--cor-letrat);
     text-align: start;
 }
 
 body p {
-    text-align: start;
-
+    color: var(--cor-p);
     font-family: var(--font-titulo);
     font-weight: 400;
     font-size: 16px;
     margin: 20px;
-    color: var(--cor-p);
+    text-align: start;
 }
 
 p::first-letter {
     text-transform: uppercase;
 }
-
 /* FIM ESTILIZAÇÃO TEXTO */
+
 
 
 /* INICIO DA DIV ESQUERDA */
@@ -124,21 +119,19 @@ div.esquerda {
 }
 
 div.esquerda::after {
+    background-color: var(--cor-verde);
     content: '';
-    width: 4%;
-    height: 2px;
-    background-color: var(---cor-verde);
     display: block;
+    height: 2px;
     position: absolute;
     right: 50.2%;
     top: 50%;
-
-
+    width: 4%;
 }
 
 div.esquerda__titulo {
-    top: 50%;
     left: 42%;
+    top: 50%;
     transform: translateY(-50%);
 }
 
@@ -150,6 +143,7 @@ div.esquerda__movimenta {
 /* FIM DA DIV ESQUERDA */
 
 
+
 /* INICIO DIV DIREITA */
 div.direita {
     display: flex;
@@ -158,18 +152,15 @@ div.direita {
 
 }
 
-
 div.direita::before {
+    background-color: var(--cor-verde);
     content: '';
-    width: 3%;
-    height: 2px;
-    background-color: var(---cor-verde);
     display: block;
-    position: absolute;
+    height: 2px;
     left: 50.2%;
+    position: absolute;
     top: 50%;
-
-
+    width: 3%;
 }
 
 div.direita__movimenta {
@@ -178,13 +169,12 @@ div.direita__movimenta {
 }
 
 div.direita__titulo {
-    top: 50%;
     right: 42%;
+    top: 50%;
     transform: translateY(-50%);
 }
-
-
 /* FIM DIV DIREITA */
+
 
 
 /* INICIO TELAS MENORES */
@@ -196,19 +186,18 @@ div.direita__titulo {
     }
 
     .container-divs {
-        width: 80%;
         height: 120px;
-
-
+        width: 80%;
     }
 
     /* FIM GERAL */
+
+
+
     /* INICIO DA DIV ESQUERDA */
-
-
     div.esquerda::after {
-        width: 5%;
         right: 1.4%;
+        width: 5%;
     }
 
     div.esquerda__titulo {
@@ -221,6 +210,8 @@ div.direita__titulo {
 
     /* FIM DA DIV ESQUERDA */
 
+
+
     /* INICIO DIV DIREITA */
     div.direita {
         justify-content: flex-start;
@@ -228,10 +219,8 @@ div.direita__titulo {
     }
 
     div.direita::before {
-        width: 5%;
         left: 93.6%;
-
-
+        width: 5%;
     }
 
     div.direita__movimenta {
@@ -240,8 +229,8 @@ div.direita__titulo {
     }
 
     div.direita__titulo {
-        top: 50%;
         left: 82.7%;
+        top: 50%;
         transform: translateY(-50%);
     }
 
